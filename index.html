@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- jQuery -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="testClass">RETRO DRAW</header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- Palette / Colors Row -->
+        <div class="optionsRow">
+
+            <section>
+
+                <h3>Change Palette</h3>
+
+                <h4 id="currentPalette">Current Palette: <span></span></h4>
+
+                <div>
+                    <button id="previousPalette">Previous Palette</button>
+                    <button id="nextPalette">Next Palette</button>
+                </div>
+
+            </section>
+
+            <section>
+
+                <h3>Add Color To Palette</h3>
+                
+                <div>
+                    <label for="hex">hex:</label>
+                    <input id="hex">
+                    <button id="createHex">Add Color To Palette</button>
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- Grid / Cells Row -->
+        <div class="optionsRow">
+
+            <section>
+
+                <h3>Switch Grid Size</h3>
+
+                <button id="createGridXy4">4 x 4</button>
+                <button id="createGridXy8">8 x 8</button>
+                <button id="createGridXy12">12 x 12</button>
+                <button id="createGridXy16">16 x 16</button>
+                <button id="createGridXy20">20 x 20</button>
+                <button id="createGridXy24">24 x 24</button>
+
+            </section>
+
+            <section>
+
+                <h3>Custom Grid Size</h3>
+
+                <p>No nums <= 0, or characters besides nums. Max for X and Y is 100.</p>
+                <p>if Y > X, rest of the grid will be in overflow scroll</p>
+                <p>If X > Y, Grid will be warped.</p>
+
+                <label for="y">Y: </label>
+                <input id="y">
+
+                <label for="x">X: </label>
+                <input id="x">
+
+                <button id="createGrid">Create Grid</button>
+
+            </section>
+
+        </div>
+
+        <!-- Drawing Conatiner -->
+        <div id="drawingContainer">
+
+            <section class="palette"></section>
+            <section class="grid"></section>
+            <section class="controls">
+                <button class="fill-all">FILL ALL CELLS</button>
+                <button class="fill-empty">FILL EMPTY CELLS</button>
+                <button class="clear">CLEAR ALL CELLS</button>
+                <button class="eraser">ERASER</button>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Script -->
+    <script defer src="app.js"></script>
+</body>
+</html>
